@@ -1,0 +1,11 @@
+const botoesVoltar = document.querySelectorAll('.btn-voltar');
+
+botoesVoltar.forEach(botao => {
+    botao.addEventListener('click', function() {
+        const atual = document.querySelector('.ativo');
+        const anterior = 'passo-' + this.getAttribute('data-voltar');
+
+        atual.classList.remove('ativo');
+        document.getElementById(anterior).classList.add('ativo');
+    });
+});
